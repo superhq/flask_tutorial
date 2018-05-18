@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-    <meta charset="UTF-8">
-<script src="https://code.jquery.com/jquery-3.3.1.js">
-</script>
-<script>
-$(document).ready(function(){
-  $('p').click(function(){
-    $(this).hide();
-  });
-});
+<meta charset="utf-8">
 
-</script>
 </head>
 <body>
-<p>如果您点击我，我会消失。</p>
-<p>点击我，我会消失。</p>
-<p>也要点击我哦。</p>
+<div id="app">
+    <p>{{message}}</p>
+    <input v-model="message">
+</div>
+    <script src="vue.js"></script>
+    <script>
+
+        var app = new Vue({
+      el: '#app',
+      data: {
+        message:'test'
+      }
+    })
+    </script>
 </body>
 </html>
